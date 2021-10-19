@@ -1,0 +1,98 @@
+header{
+    position: fixed;width:100%;color:black;display:flex;z-index: 100;transition: 700ms;
+    @media(min-width:767px){
+        justify-content:space-between;padding:2% 5% 0;
+    }
+    
+    img{
+        height:60px;padding:3%;margin-top:9px;
+        @media(min-width:767px){
+            padding:1%;height:100px;margin:0;
+        }
+    }
+    .menu{
+        @media(min-width:767px){
+            margin:auto 0;
+        }
+        label{
+            padding:20px 34px 5px 5px;position:absolute;right:20px;top:20px;
+            @media(min-width:767px){
+                display:none;
+            }
+            span{
+                width: 25px;height:3px;background:rgb(255, 255, 255);position: absolute;
+                &:before{
+                    background:rgb(255, 255, 255);width:100%;height:100%;position: absolute;top:-7px;content:"";
+                }
+                &:after{
+                    background:rgb(255, 255, 255);width:100%;height:100%;position: absolute;top:7px;content:"";
+                }
+            }
+        }
+        ul{
+            max-height:0;overflow: hidden;opacity: 0;transition:700ms;width:100%;top:80px;position: absolute;left:0;background:white;
+            @media(min-width:767px){
+                max-height:unset;opacity: 1;background:transparent;top:0;position: relative;
+            }
+            li{
+                @media(min-width:767px){
+                    float: left;
+                }
+                a{
+                    display: block;padding:20px;text-decoration: none;color:rgb(0, 0, 0);font-size:15px;
+                    @media(min-width:767px){
+                        color:white;padding:20px 30px;
+                    }
+                }
+                
+            }
+            .act{
+                background:$yellow;
+                @media(min-width:767px){
+                    background: transparent;
+                }
+                a{
+                    color:white;
+                    @media(min-width:767px){
+                        color:$yellow;
+                    }
+                }
+            }
+        }
+        .active{
+            max-height:500px;opacity: 1;
+        }
+    }
+}
+
+.bgColor{
+    background:white;padding:0;
+    .menu{
+        label{
+            span{
+                background: black;
+                &:before{
+                    background: black;
+                }
+                &:after{
+                    background: black;
+                }
+            }
+        }
+        ul{
+            li{
+                a{
+                    color: black;
+                }
+            }
+            .act{
+                a{
+                    color: $yellow;
+                    @media(max-width:767px){
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

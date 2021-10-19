@@ -1,0 +1,29 @@
+@font-face{
+    font-family:"glyphicons";
+    font-style:normal;
+    src: url("./fonts/glyphicons-halflings-regular.eot"),
+        url("./fonts/glyphicons-halflings-regular.ttf"),
+        url("./fonts/glyphicons-halflings-regular.woff"),
+        url("./fonts/glyphicons-halflings-regular.woff2");
+}
+
+
+@mixin flex {
+    display:flex; align-items: center; justify-content: center;
+}
+
+@mixin background {
+    background-size: cover;background-position: center center;
+}
+
+@import "./variables";
+@import "./reset";
+@import "./header";
+@import "./banner";
+@import "./about";
+@import "./services";
+@import "./products";
+@import "./contact";
+@import "./footer";
+
+
